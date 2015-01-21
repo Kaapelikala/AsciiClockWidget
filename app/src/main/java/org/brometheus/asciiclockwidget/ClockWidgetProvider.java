@@ -53,13 +53,35 @@ public class ClockWidgetProvider extends AppWidgetProvider {
         getTime();
     }
 
-    private static void getTime()
+    private static String getTime()
     {
+
+        String numbers[][]={
+                {"..**",".**.","***.","..**","****",".***","****",".**.",".**.",".**."},
+                {"...*","*..*","...*",".*.*","*...","*...","...*","*..*","*..*","*..*"},
+                {"...*","..*.","****","****","***.","***.","..*.","****",".***","*..*"},
+                {"...*",".*..","...*","...*","...*","*..*",".*..","*..*","...*","*..*"},
+                {"...*","****","***.","...*","***.",".**.","*...",".**.",".**.",".**."}};
+
+        String temp="";
+
         Calendar calendar = new GregorianCalendar();
 
         hours = calendar.get(Calendar.HOUR_OF_DAY);
         minutes=calendar.get(Calendar.MINUTE);
+        String time=Integer.toString(hours)+Integer.toString(minutes);
+
+        //5 rows per number
+        for (int i=0;i<5;i++)
+        {
+            for (int i=0;)
+        }
+
+
+
+        return temp;
 
     }
+
 
 }
